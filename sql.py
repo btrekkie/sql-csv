@@ -178,7 +178,7 @@ def execute_sql(query, connection):
         cursor.execute(query)
         connection.commit()
         rows = []
-        for index in range(20):
+        for _ in range(20):
             row = cursor.fetchone()
             if row is None:
                 break
