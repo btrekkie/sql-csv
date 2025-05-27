@@ -12,11 +12,15 @@ To execute the program, run `python3 /path/to/sql.py` from the command line.
 * Import a CSV file as a SQL table. The column names are derived from the header
   row, and the values' datatypes are inferred.
 * Export the results of a SQL query to a CSV file.
+* CSV files and SQL result sets are streamed, rather than loading them all into
+  memory at once. As a result, it is possible to import and export very large
+  CSV files without running out of memory.
 * No external dependencies.
 
 # Limitations
 * Configuration and options are limited (because I prioritized simplicity of
   implementation and use).
+* Importing and exporting large CSV files is not particularly fast.
 
 # Example
 ```
